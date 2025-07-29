@@ -1,0 +1,380 @@
+/* 币安风格主题全局样式 */
+:root {
+  /* 浅色模式色彩 */
+  --binance-bg-primary: #FFFFFF;
+  --binance-bg-secondary: #FAFAFA;
+  --binance-bg-tertiary: #F5F5F5;
+  --binance-bg-quaternary: #EAECEF;
+  
+  /* 浅色模式文字颜色 */
+  --binance-text-primary: #1E2329;
+  --binance-text-secondary: #474D57;
+  --binance-text-tertiary: #848E9C;
+  --binance-text-quaternary: #B7BDC6;
+  
+  /* 浅色模式边框色 */
+  --binance-border-primary: #EAECEF;
+  --binance-border-secondary: #D1D5DB;
+  --binance-border-tertiary: #E5E7EB;
+  
+  /* 品牌色 - 通用 */
+  --binance-yellow: #F0B90B;
+  --binance-yellow-hover: #F0B90B;
+  --binance-yellow-light: #FCD535;
+  
+  /* 功能色 - 通用 */
+  --binance-green: #0ECB81;
+  --binance-green-light: #2EBD85;
+  --binance-red: #F6465D;
+  --binance-red-light: #FF6B7A;
+  --binance-blue: #0052FF;
+  --binance-orange: #FF8A00;
+  
+  /* 阴影 - 通用 */
+  --binance-shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --binance-shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+  --binance-shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+  
+  /* 圆角 - 通用 */
+  --binance-radius-sm: 4px;
+  --binance-radius-md: 6px;
+  --binance-radius-lg: 8px;
+  --binance-radius-xl: 12px;
+}
+
+/* 深色模式 */
+:root.dark {
+  /* 币安官网深色主题色彩 */
+  --binance-bg-primary: #0B0E11;
+  --binance-bg-secondary: #1E2329;
+  --binance-bg-tertiary: #2B3139;
+  --binance-bg-quaternary: #1A1A1A;
+  
+  /* 深色模式文字颜色 */
+  --binance-text-primary: #FDFEFE;
+  --binance-text-secondary: #B7BDC6;
+  --binance-text-tertiary: #848E9C;
+  --binance-text-quaternary: #5E6673;
+  
+  /* 深色模式边框色 */
+  --binance-border-primary: #2B3139;
+  --binance-border-secondary: #474D57;
+  --binance-border-tertiary: #30363D;
+  
+  /* 深色模式阴影 */
+  --binance-shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+  --binance-shadow-md: 0 4px 12px rgba(0,0,0,0.6);
+  --binance-shadow-lg: 0 8px 24px rgba(0,0,0,0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--binance-bg-primary);
+  color: var(--binance-text-primary);
+  line-height: 1.5;
+}
+
+/* 设置Element Plus深色主题变量 */
+:root {
+  --el-color-primary: var(--binance-yellow);
+  --el-color-primary-light-3: var(--binance-yellow-light);
+  --el-color-primary-light-5: var(--binance-yellow-light);
+  --el-color-primary-light-7: var(--binance-yellow-light);
+  --el-color-primary-light-8: var(--binance-yellow-light);
+  --el-color-primary-light-9: var(--binance-yellow-light);
+  --el-color-primary-dark-2: var(--binance-yellow);
+  
+  --el-color-success: var(--binance-green);
+  --el-color-warning: var(--binance-orange);
+  --el-color-danger: var(--binance-red);
+  --el-color-error: var(--binance-red);
+  --el-color-info: var(--binance-text-tertiary);
+  
+  --el-bg-color: var(--binance-bg-secondary);
+  --el-bg-color-page: var(--binance-bg-primary);
+  --el-bg-color-overlay: var(--binance-bg-tertiary);
+  
+  --el-text-color-primary: var(--binance-text-primary);
+  --el-text-color-regular: var(--binance-text-secondary);
+  --el-text-color-secondary: var(--binance-text-tertiary);
+  --el-text-color-placeholder: var(--binance-text-quaternary);
+  --el-text-color-disabled: var(--binance-text-quaternary);
+  
+  --el-border-color: var(--binance-border-primary);
+  --el-border-color-light: var(--binance-border-secondary);
+  --el-border-color-lighter: var(--binance-border-tertiary);
+  --el-border-color-extra-light: var(--binance-border-tertiary);
+  --el-border-color-dark: var(--binance-border-primary);
+  --el-border-color-darker: var(--binance-border-primary);
+  
+  --el-fill-color: var(--binance-bg-tertiary);
+  --el-fill-color-light: var(--binance-bg-secondary);
+  --el-fill-color-lighter: var(--binance-bg-secondary);
+  --el-fill-color-extra-light: var(--binance-bg-secondary);
+  --el-fill-color-dark: var(--binance-bg-quaternary);
+  --el-fill-color-darker: var(--binance-bg-quaternary);
+  --el-fill-color-blank: transparent;
+  
+  --el-box-shadow: var(--binance-shadow-sm);
+  --el-box-shadow-light: var(--binance-shadow-sm);
+  --el-box-shadow-base: var(--binance-shadow-md);
+  --el-box-shadow-dark: var(--binance-shadow-lg);
+  
+  --el-border-radius-base: var(--binance-radius-md);
+  --el-border-radius-small: var(--binance-radius-sm);
+  --el-border-radius-round: 50%;
+  --el-border-radius-circle: 50%;
+}
+
+/* 币安风格滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--binance-bg-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--binance-border-secondary);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--binance-text-quaternary);
+}
+
+/* Firefox滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--binance-border-secondary) var(--binance-bg-tertiary);
+}
+
+/* 币安风格工具类 */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 间距工具类 */
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.p-6 {
+  padding: 24px;
+}
+
+/* 币安风格文字颜色 */
+.text-primary {
+  color: var(--binance-text-primary);
+}
+
+.text-secondary {
+  color: var(--binance-text-secondary);
+}
+
+.text-tertiary {
+  color: var(--binance-text-tertiary);
+}
+
+.text-success {
+  color: var(--binance-green);
+}
+
+.text-danger {
+  color: var(--binance-red);
+}
+
+.text-warning {
+  color: var(--binance-orange);
+}
+
+.text-brand {
+  color: var(--binance-yellow);
+}
+
+/* 币安风格背景色 */
+.bg-primary {
+  background: var(--binance-bg-primary);
+}
+
+.bg-secondary {
+  background: var(--binance-bg-secondary);
+}
+
+.bg-tertiary {
+  background: var(--binance-bg-tertiary);
+}
+
+/* 币安风格卡片 */
+.binance-card {
+  background: var(--binance-bg-secondary);
+  border: 1px solid var(--binance-border-primary);
+  border-radius: var(--binance-radius-lg);
+  box-shadow: var(--binance-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.binance-card:hover {
+  border-color: var(--binance-border-secondary);
+  box-shadow: var(--binance-shadow-md);
+}
+
+/* 币安风格按钮 */
+.binance-btn {
+  border: none;
+  border-radius: var(--binance-radius-md);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.binance-btn-primary {
+  background: var(--binance-yellow);
+  color: var(--binance-bg-primary);
+}
+
+.binance-btn-primary:hover {
+  background: var(--binance-yellow-light);
+  transform: translateY(-1px);
+}
+
+.binance-btn-ghost {
+  background: transparent;
+  color: var(--binance-text-secondary);
+  border: 1px solid var(--binance-border-secondary);
+}
+
+.binance-btn-ghost:hover {
+  color: var(--binance-text-primary);
+  border-color: var(--binance-yellow);
+}
+
+/* 币安风格徽章 */
+.binance-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--binance-radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.binance-badge-success {
+  background: rgba(14, 203, 129, 0.1);
+  color: var(--binance-green);
+  border: 1px solid rgba(14, 203, 129, 0.2);
+}
+
+.binance-badge-danger {
+  background: rgba(246, 70, 93, 0.1);
+  color: var(--binance-red);
+  border: 1px solid rgba(246, 70, 93, 0.2);
+}
+
+.binance-badge-warning {
+  background: rgba(255, 138, 0, 0.1);
+  color: var(--binance-orange);
+  border: 1px solid rgba(255, 138, 0, 0.2);
+}
+
+.binance-badge-primary {
+  background: rgba(240, 185, 11, 0.1);
+  color: var(--binance-yellow);
+  border: 1px solid rgba(240, 185, 11, 0.2);
+}
+
+.binance-badge-secondary {
+  background: rgba(132, 142, 156, 0.1);
+  color: var(--binance-text-secondary);
+  border: 1px solid rgba(132, 142, 156, 0.2);
+}
+
+/* 响应式网格 */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* 响应式断点 */
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
